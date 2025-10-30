@@ -1,7 +1,7 @@
 import java.util.Locale;
 
 public final class Cipher {
-    public static final String ALPHABET = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя.,“”: -!? ";
+    public static final String ALPHABET = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя.,“”:-!? ";
     private static final int ALPHABET_SIZE = ALPHABET.length();
 
     private Cipher() {}
@@ -15,6 +15,8 @@ public final class Cipher {
                 int newIdx = (idx + key) % ALPHABET_SIZE;
                 if (newIdx < 0) newIdx += ALPHABET_SIZE;
                 result.append(ALPHABET.charAt(newIdx));
+            } else {
+                result.append(c);
             }
         }
         return result.toString();
@@ -24,5 +26,3 @@ public final class Cipher {
         return encrypt(text, -key);
     }
 }
-
-

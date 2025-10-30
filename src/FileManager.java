@@ -66,5 +66,3 @@ public final class FileManager {
         return dot == -1 ? fileName : fileName.substring(0, dot);
     }
 }
-
-

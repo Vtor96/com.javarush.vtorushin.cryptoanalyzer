@@ -55,5 +55,3 @@ public final class BruteForce {
         return count;
     }
 }
-
-
